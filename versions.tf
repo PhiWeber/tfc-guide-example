@@ -1,7 +1,6 @@
 terraform {
   cloud {
     organization = "PluralithDemo"
-
     workspaces {
       name = "tfc-guide-example"
     }
