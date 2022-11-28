@@ -2,7 +2,7 @@ provider "aws" {
   region = var.region
 }
 
-data "aws_ami" "ubuntu" {
+data "aws_ami" "test" {
   most_recent = true
 
   filter {
@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "aws_instance" "ubuntu" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = data.aws_ami.test.id
   instance_type = var.instance_type
 
   tags = {
